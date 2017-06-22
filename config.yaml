@@ -1,0 +1,41 @@
+# Example configuration in YAML
+
+# HTTP configuration
+http:
+    # Port to use
+    port: 3001
+    
+    # Headers to always set for all requests
+    headers:
+        Access-Control-Allow-Headers: Authorization, Content-Type
+        Access-Control-Allow-Methods: GET,HEAD,POST,PUT,PATCH,DELETE
+        Access-Control-Allow-Origin: "*"
+        X-Clacks-Overhead: GNU Terry Pratchett
+    
+    # If set path to directory containing static content
+    #static: public
+    
+    # View engine
+    #view:
+    #    engine: jade
+    #    path: views
+    
+    # Favicon
+    #favicon: public/favicon.ico
+
+endpoint:
+    Example: ./example/example
+    
+# Databases
+databases:
+    # Local test database
+    test:
+        # this disables this entry
+        enabled: false
+        host: localhost
+        port: 5432
+        database: postgres
+        user: postgres
+        password: postgres
+        ssl: false
+        
